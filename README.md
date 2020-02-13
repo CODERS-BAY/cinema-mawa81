@@ -30,3 +30,6 @@ Create a ERD and a Relation Model for this example
  ticket(serialNumber:int, cinema:varchar(32), hall:int, filmtitle:varchar(32), filmDate:date, startingTime: time, raw:int, seatNumber:int, price: double ) <br>
  seat() <br>
  ![Github Logo](20200213_114037.jpg)
+ 
+ Added photo Groupwork:
+ ![Github Logo](WhatsApp Image 2020-02-13 at 14.01.17.jpeg)
