@@ -1,7 +1,6 @@
 # Cinema
 ## Choose useful attributes and relations
 
-
 The STAR-MOVIES company operates a cinema chain with several cinemas (Name,
 Address... ). Each cinema can have several halls where the films are shown. The seating plan of each hall should 
 be recorded; a row and a seat must be indicated for each seat. A box should be managed like a row.
@@ -29,7 +28,49 @@ Create a ERD and a Relation Model for this example
  hall() <br>
  ticket(serialNumber:int, cinema:varchar(32), hall:int, filmtitle:varchar(32), filmDate:date, startingTime: time, raw:int, seatNumber:int, price: double ) <br>
  seat() <br>
+ 
+ ### first solution:
+ 
  ![Github Logo](20200213_114037.jpg)
  
  Added photo Groupwork:
+ 
  ![Github Logo](WhatsApp Image 2020-02-13 at 14.01.17.jpeg)
+ 
+ ### second solution:
+ 
+ #### ERM:
+ 
+ 
+ #### textual notation:
+ 
+* cinema ( **cinemaID**:INT, name:VARCHAR(32), address:VARCHAR(32), city:VARCHAR(32), postalcode:INT, numberofhalls:INT )
+
+* hall ( **hallNR**:INT, *cinemaID*:INT, maxseats:INT, maxrows:INT  )
+
+* seatingplan ( *cinemaID*:INT, *hallNR*:INT, rowNR:INT, seatNR:INT)
+
+* row ( **rowNR**:INT, isbox:BOOLEAN, standardprice:INT, specialprice:INT, maxseats:INT )
+
+* seat ( *rowNR*:INT, *seatNR*:INT)
+
+* screening schedule ( *cinemaID*:INT, *hallNR*:INT, date:DATE, startingtime:TIME, filmID:INT )
+
+* film(filmID:INT, filmtitle:VARCHAR(32), *director*:INT, type:VARCHAR(32), yearofproduction:INT, country:VARCHAR(32), 
+language:VARCHAR(32), duration:INT, distribution:VARCHAR(32)) 
+
+* ticket(serialNumber:INT, cinemaID:INT, hallNR:INT, filmID:INT, date:DATE, startingtime:TIME, 
+rowNR:INT, seatNR:INT, price:INT , isreserved:BOOLEAN, ispurchased:BOOLEAN)
+
+* actor (**actorID**:INT, firstname:VARCHAR(32), lastname:VARCHAR(32), nationality:VARCHAR(32), date of birth:DATE, 
+date of death:DATE, comments:VARCHAR(1000)) 
+
+* filmcast( *filmID*:INT, *actorID*:INT )
+
+* director (**directorID**:INT, firstname:VARCHAR(32), lastname:VARCHAR(32), nationality:VARCHAR(32), date of birth:DATE, 
+           date of death:DATE, comments:VARCHAR(1000)) 
+           
+       
+ #### SQL DB Schema:
+ 
+[SQL DB Schema](cinemaDB_Schema.pdf)
