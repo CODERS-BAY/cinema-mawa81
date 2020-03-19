@@ -35,7 +35,7 @@ Create a ERD and a Relation Model for this example
  
  Added photo Groupwork:
  
- ![Github Logo](WhatsApp Image 2020-02-13 at 14.01.17.jpeg)
+ ![Github Logo](WhatsApp Image 2020-02-13.jpeg)
  
  ### second solution:
  
