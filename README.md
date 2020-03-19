@@ -31,11 +31,11 @@ Create a ERD and a Relation Model for this example
  
  ### first solution:
  
- ![Github Logo](20200213_114037.jpg)
+![ERM own](20200213_114037.jpg)
  
  Added photo Groupwork:
  
- ![Github Logo](WhatsApp Image 2020-02-13.jpeg)
+![ERM group](WhatsApp Image 2020-02-13.jpeg)
  
  ### second solution:
  
