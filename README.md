@@ -41,6 +41,7 @@ Create a ERD and a Relation Model for this example
  
  #### ERM:
  
+ ![ERM own](cinemaERM_mario.jpg)
  
  #### textual notation:
  
@@ -50,9 +51,7 @@ Create a ERD and a Relation Model for this example
 
 * seatingplan ( *cinemaID*:INT, *hallNR*:INT, rowNR:INT, seatNR:INT)
 
-* row ( **rowNR**:INT, isbox:BOOLEAN, standardprice:INT, specialprice:INT, maxseats:INT )
-
-* seat ( *rowNR*:INT, *seatNR*:INT)
+* row ( *cinemaID*:INT, *hallNR*:INT, **rowNR**:INT, isbox:BOOLEAN, standardprice:INT, specialprice:INT, maxseats:INT )
 
 * screening schedule ( *cinemaID*:INT, *hallNR*:INT, date:DATE, startingtime:TIME, filmID:INT )
 
@@ -63,13 +62,10 @@ language:VARCHAR(32), duration:INT, distribution:VARCHAR(32))
 rowNR:INT, seatNR:INT, price:INT , isreserved:BOOLEAN, ispurchased:BOOLEAN)
 
 * actor (**actorID**:INT, firstname:VARCHAR(32), lastname:VARCHAR(32), nationality:VARCHAR(32), date of birth:DATE, 
-date of death:DATE, comments:VARCHAR(1000)) 
+date of death:DATE, comments:VARCHAR(1000), isactor:BOOLEAN, isdirector:BOOLEAN) 
 
 * filmcast( *filmID*:INT, *actorID*:INT )
 
-* director (**directorID**:INT, firstname:VARCHAR(32), lastname:VARCHAR(32), nationality:VARCHAR(32), date of birth:DATE, 
-           date of death:DATE, comments:VARCHAR(1000)) 
-           
        
  #### SQL DB Schema:
  
